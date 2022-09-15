@@ -1,0 +1,29 @@
+
+body {
+  background-color: #B1D7B4;
+  font-family:tahoma;
+}
+
+hr {
+background-color: #B1D7B4;
+border-style: none;
+border-top: dotted 6px #F7F6DC;
+height: 2px;
+width: 30px;
+}
+
+p {
+  color: black;
+}
+h1 {
+  color: black;
+}
+
+h3 {
+color: black;
+
+}
+
+a {
+  color:  black;
+}
