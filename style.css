@@ -1,13 +1,13 @@
 
 body {
-  background-color: #B1D7B4;
+  background-color: #F7F6DC;
   font-family:tahoma;
 }
 
 hr {
-background-color: #B1D7B4;
+background-color: ##F7F6DC;
 border-style: none;
-border-top: dotted 6px #F7F6DC;
+border-top: dotted 6px #562B08;
 height: 2px;
 width: 30px;
 }
