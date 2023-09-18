@@ -1,0 +1,60 @@
+/* Style the body and background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffd3e0; /* Light pink */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    color: #ff0080; /* Pink */
+    padding: 20px;
+}
+
+/* Style the select and button */
+select, button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+select {
+    width: 100%;
+    background-color: #fff5f8; /* Lighter pink */
+}
+
+button {
+    background-color: #ff0080; /* Pink */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff0055; /* Slightly darker pink on hover */
+}
+
+/* Style the result container */
+#result {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the movie title */
+h2 {
+    color: #ff0080; /* Pink */
+}
+
+/* Style the movie description */
+p {
+    color: #666; /* Dark gray */
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Movie Selector</title>
+    <link rel="stylesheet" type="text/css" href="imdb.css"> 
+</head>
+<body>
+    
+    <table align="center">
+        <tr>
+            <td>    <img src="Screen Shot 2023-09-18 at 3.26.43 PM.png" width="" height="200" align="center">
+            </td>
+            </tr>
+            <tr>
+            <td>    <h1>Random Movie Selector</h1>
+            </td>
+        </tr>
+    </table>
+    <label for="genre">Select a movie genre:</label>
+    <select id="genre">
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="99">Documentary</option>
+        <option value="18">Drama</option>
+        <option value="10751">Family</option>
+        <option value="14">Fantasy</option>
+        <option value="36">History</option>
+        <option value="27">Horror</option>
+        <option value="10402">Music</option>
+        <option value="9648">Mystery</option>
+        <option value="10749">Romance</option>
+        <option value="878">Science Fiction</option>
+        <option value="10770">Thriller</option>
+        <option value="53">TV Movie</option>
+        <option value="10752">War</option>
+        <option value="37">Western</option>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Add more genres as needed -->
+    </select>
+    <button onclick="getRandomMovie()">Get Random Movie</button>
+    <div id="result">
+        <div id="loading" style="display: none;">Loading...</div>
+        <img id="poster" src="" alt="Movie Poster" style="max-width: 100%;">
+        <h2 id="movieTitle"></h2>
+        <p id="movieOverview"></p>
+    </div>
+
+    <script>
+        async function getRandomMovie() {
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("poster").style.display = "none";
+            
+            const selectedGenre = document.getElementById("genre").value;
+            const apiKey = "7bea14e3c6dd5201fd37c672738d3272";
+            const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${selectedGenre}`;
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const movies = data.results;
+                
+                if (movies.length === 0) {
+                    document.getElementById("result").innerHTML = "No movies found for this genre.";
+                } else {
+                    const randomIndex = Math.floor(Math.random() * movies.length);
+                    const randomMovie = movies[randomIndex];
+                    
+                    document.getElementById("poster").src = `https://image.tmdb.org/t/p/w500${randomMovie.poster_path}`;
+                    document.getElementById("poster").style.display = "block";
+                    document.getElementById("movieTitle").textContent = randomMovie.title;
+                    document.getElementById("movieOverview").textContent = randomMovie.overview;
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById("result").innerHTML = "An error occurred while fetching data.";
+            } finally {
+                document.getElementById("loading").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
