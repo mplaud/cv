@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="gamestyle.css"> 
+
+    <title>Life Tracker</title>
+    <style>
+        /* Basic styles for the application */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .player {
+            display: inline-block;
+            margin: 20px;
+        }
+        .counter {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Life Tracker</h1>
+    <div class="player">
+        <h2>Player 1</h2>
+        <p>Life Total: <span id="player1-life">40</span></p>
+        <button onclick="incrementLife('player1-life')">+</button>
+        <button onclick="decrementLife('player1-life')">-</button>
+        <br>
+        <h3>Counters</h3>
+        <div id="player1-counters">
+            <!-- Counter elements will be added here -->
+        </div>
+        <input type="text" id="player1-counter-name" placeholder="Counter Name">
+        <button onclick="addCounter('player1-counters', 'player1-counter-name')">Add Counter</button>
+    </div>
+    <div class="player">
+        <h2>Player 2</h2>
+        <p>Life Total: <span id="player1-life">40</span></p>
+        <button onclick="incrementLife('player1-life')">+</button>
+        <button onclick="decrementLife('player1-life')">-</button>
+        <br>
+        <h3>Counters</h3>
+        <div id="player1-counters">
+            <!-- Counter elements will be added here -->
+        </div>
+        <input type="text" id="player1-counter-name" placeholder="Counter Name">
+        <button onclick="addCounter('player1-counters', 'player1-counter-name')">Add Counter</button>
+    </div>
+    <div class="player">
+        <h2>Player 3</h2>
+        <p>Life Total: <span id="player1-life">40</span></p>
+        <button onclick="incrementLife('player1-life')">+</button>
+        <button onclick="decrementLife('player1-life')">-</button>
+        <br>
+        <h3>Counters</h3>
+        <div id="player1-counters">
+            <!-- Counter elements will be added here -->
+        </div>
+        <input type="text" id="player1-counter-name" placeholder="Counter Name">
+        <button onclick="addCounter('player1-counters', 'player1-counter-name')">Add Counter</button>
+    </div>
+    <div class="player">
+        <h2>Player 4</h2>
+        <p>Life Total: <span id="player1-life">40</span></p>
+        <button onclick="incrementLife('player1-life')">+</button>
+        <button onclick="decrementLife('player1-life')">-</button>
+        <br>
+        <h3>Counters</h3>
+        <div id="player1-counters">
+            <!-- Counter elements will be added here -->
+        </div>
+        <input type="text" id="player1-counter-name" placeholder="Counter Name">
+        <button onclick="addCounter('player1-counters', 'player1-counter-name')">Add Counter</button>
+    </div>
+    <!-- Repeat the above structure for players 2, 3, and 4 as needed -->
+
+    <script>
+        // Function to increment the life total
+        function incrementLife(elementId) {
+            const lifeElement = document.getElementById(elementId);
+            lifeElement.innerText = parseInt(lifeElement.innerText) + 1;
+        }
+
+        // Function to decrement the life total
+        function decrementLife(elementId) {
+            const lifeElement = document.getElementById(elementId);
+            lifeElement.innerText = parseInt(lifeElement.innerText) - 1;
+        }
+
+        // Function to add a counter
+        function addCounter(countersId, counterNameId) {
+            const countersElement = document.getElementById(countersId);
+            const counterNameElement = document.getElementById(counterNameId);
+
+            const newCounter = document.createElement('div');
+            newCounter.className = 'counter';
+            newCounter.innerHTML = `
+                <p>${counterNameElement.value}: <span id="${counterNameElement.value}-value">0</span></p>
+                <button onclick="incrementCounter('${counterNameElement.value}-value')">+</button>
+                <button onclick="decrementCounter('${counterNameElement.value}-value')">-</button>
+            `;
+
+            countersElement.appendChild(newCounter);
+            counterNameElement.value = ''; // Clear the input field
+        }
+
+        // Function to increment a counter
+        function incrementCounter(elementId) {
+            const counterValueElement = document.getElementById(elementId);
+            counterValueElement.innerText = parseInt(counterValueElement.innerText) + 1;
+        }
+
+        // Function to decrement a counter
+        function decrementCounter(elementId) {
+            const counterValueElement = document.getElementById(elementId);
+            counterValueElement.innerText = parseInt(counterValueElement.innerText) - 1;
+        }
+    </script>
+</body>
+</html>
