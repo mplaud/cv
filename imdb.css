@@ -1,31 +1,33 @@
-/* Style the body and background */
+/* Style the body and background (Mobile) */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffd3e0; /* Light pink */
+    background-color: #ffcccb; /* Light coral pink */
     margin: 0;
     padding: 0;
 }
 
-/* Style the header */
+/* Style the header (Mobile) */
 h1 {
     text-align: center;
     color: #ff0080; /* Pink */
-    padding: 20px;
+    font-size: 28px;
+    margin-top: 20px;
 }
 
-/* Style the select and button */
+/* Style the select and button (Mobile) */
 select, button {
     display: block;
     margin: 20px auto;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    width: 100%; /* Full width on mobile */
+    background-color: #fff5f8; /* Lighter pink */
 }
 
 select {
-    width: 100%;
-    background-color: #fff5f8; /* Lighter pink */
+    color: #ff0080; /* Pink text color */
 }
 
 button {
@@ -39,22 +41,35 @@ button:hover {
     background-color: #ff0055; /* Slightly darker pink on hover */
 }
 
-/* Style the result container */
+/* Style the result container (Mobile) */
 #result {
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Full width on mobile */
 
-/* Style the movie title */
+}
+/* Style the movie title (Mobile) */
 h2 {
     color: #ff0080; /* Pink */
+    font-size: 24px;
+    text-align: center;
 }
 
-/* Style the movie description */
+/* Style the movie description (Mobile) */
 p {
     color: #666; /* Dark gray */
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+    /* Add styles for larger screens here */
 }

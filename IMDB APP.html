@@ -6,17 +6,13 @@
     <link rel="stylesheet" type="text/css" href="imdb.css"> 
 </head>
 <body>
-    
-    <table align="center">
-        <tr>
-            <td>    <img src="Screen Shot 2023-09-18 at 3.26.43 PM.png" width="" height="200" align="center">
-            </td>
-            </tr>
-            <tr>
-            <td>    <h1>Random Movie Selector</h1>
-            </td>
-        </tr>
-    </table>
+
+            <p span id="photo"> <img src="Screen Shot 2023-09-18 at 3.26.43 PM.png" width="" height="200" align="center"></p>  
+          
+            
+           <h1>Random Movie Selector</h1>
+
+
     <label for="genre">Select a movie genre:</label>
     <select id="genre">
         <option value="28">Action</option>
@@ -39,23 +35,12 @@
         <option value="10752">War</option>
         <option value="37">Western</option>
 
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Add more genres as needed -->
     </select>
+
     <button onclick="getRandomMovie()">Get Random Movie</button>
     <div id="result">
         <div id="loading" style="display: none;">Loading...</div>
-        <img id="poster" src="" alt="Movie Poster" style="max-width: 100%;">
+        <img id="poster" src="" alt="Movie Poster" >
         <h2 id="movieTitle"></h2>
         <p id="movieOverview"></p>
     </div>
