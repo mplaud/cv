@@ -1,0 +1,77 @@
+body {
+    background: rgb(212, 211, 211);
+    background-image: url("kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+    background-color: #cccccc;
+    background-size: 768px 768px;
+    min-width: 768px 
+  }
+  
+  #title {
+
+    color: black;
+    width: 180px;
+    flex-wrap: wrap;
+
+
+
+  }
+  .grid {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid div {
+    width: 20px;
+    height: 20px;
+    /*border:1px black solid;
+  box-sizing:border-box*/
+  }
+  
+  .snake {
+    background: green;
+  }
+  
+  .apple {
+    background: red;
+    border-radius: 20px;
+  }
+  
+  .popup {
+    background: black;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .td {
+    
+      height: 50px;
+      vertical-align: middle;
+      text-align: center;
+
+    }
+  
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .player {
+        flex-direction: column; /* Align items in a row for larger screens */
+    }
+}

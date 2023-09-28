@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+  <link rel="stylesheet" type="text/css" href="snakegame.css">
+</head>
+
+<body>
+  <div id="title">
+<h1>Snake Game</h1>
+</div>
+<label for="difficulty">Select difficulty:</label>
+<div><select id="difficulty">
+  <option value="Easy">Easy</option>
+  <option value="Normal">Normal</option>
+  <option value="Hard">Hard</option>
+</select></div>
+<div></div>
+  <button id="startSnake">Start Game</button>
+</div>
+<div>
+<label for="scoreDisplay">Score:</label>
+</div>
+<div class="scoreDisplay"></div>
+<div class="grid"></div>
+<div class="button">
+  <table>
+  <tr><td></td><td><button class="top">top</button></td><td></td></tr>
+  <tr><td>  <button class="left">left</button>
+  </td><td></td><td>  <button class="right">right</button>
+  </td></tr>
+  <tr><td></td><td><button class="bottom">bottom</button></td><td></td></tr>
+  
+  </table>
+  
+</div>
+
+<div class="popup">
+  <button class="playAgain">play Again</button>
+</div>
+
+
+
+  <script src="snakescript.js"></script>
+
+</body>
+
+
+</html>
