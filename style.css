@@ -1,29 +1,56 @@
 
 body {
   background-color: #F7F6DC;
+  background-image: url("dark background.png");
+  background-size: 768px 768px;
+  min-width: 320px 
   font-family:tahoma;
 }
 
 hr {
-background-color: #F7F6DC;
+background-color: none;
 border-style: none;
-border-top: dotted 6px #562B08;
+border-top: dotted 6px whitesmoke;
 height: 2px;
 width: 30px;
 }
 
 p {
-  color: black;
+  color: whitesmoke;
 }
 h1 {
-  color: black;
+  color: whitesmoke;
 }
 
 h3 {
-color: black;
+color: whitesmoke;
 
 }
 
 a {
-  color:  black;
+  color:  whitesmoke;
+}
+
+table {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+
+
+}
+
+th {
+  color: whitesmoke;
+}
+td {
+  color: whitesmoke;
+
+}
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+  /* Add styles for larger screens here */
 }
