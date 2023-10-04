@@ -4,7 +4,7 @@ body {
   background-image: url("dark background.png");
   background-size: 768px 768px;
   min-width: 320px 
-  font-family:tahoma;
+  font-family: tahoma;
 }
 
 hr {
@@ -49,6 +49,10 @@ th {
 td {
   color: whitesmoke;
 
+}
+
+label {
+  color: whitesmoke;
 }
 /* Media query for larger screens (e.g., tablets and desktops) */
 @media (min-width: 768px) {
