@@ -2,8 +2,9 @@ body {
   background: gray;
     background-image: url("pauline-heidmets-GTL39WM6QqA-unsplash.png");
     background-color: #ffffff;
-    background-size: 100% 170%;
+    background-size: 100% 200%;
     background-repeat: no-repeat;
+    background-position: center;
     min-width: 320px 
   }
   
