@@ -1,8 +1,9 @@
 body {
   background: rgb(212, 211, 211);
-    background-image: url("kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+    background-image: url("pauline-heidmets-GTL39WM6QqA-unsplash.png");
     background-color: #ffffff;
-    background-size: 760px 760px;
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
     min-width: 320px 
   }
   
