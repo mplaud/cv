@@ -5,12 +5,24 @@ body {
     background-color: #0055A4; /* Deep blue background */
     margin: 0;
     padding: 0;
+    justify-content: center;
+}
+
+.center {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 
+.content1 {
+    display: flex;
+} 
+
+.content2 {
+    display: flex;
+} 
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -100,21 +112,23 @@ button:hover {
 
 /* Media query for landscape (wider) screens */
 @media screen and (min-width: 768px) {
-    .content {
-        flex-direction: column; /* Arrange players horizontally for wider screens */
+    .content1 {
+        flex-direction: row; /* Arrange players horizontally for wider screens */
+        transform: rotate(180deg);
+        justify-content: center;
+
+
+    }
+    .content2 {
+        flex-direction: row; /* Arrange players horizontally for wider screens */
+        justify-content: center;
+
     }
 
     .player {
-        width: 30%; /* Adjust as needed to fit four players on a row */
+        width: 45%; /* Adjust as needed to fit four players on a row */
     }
 
-    /* Rotate players 3 and 4 for landscape mode */
-    .player:nth-child(1),
-    .player:nth-child(2) {
-     transform: rotate(180deg);
-    }
-    .player:nth-child(3),
-    .player:nth-child(4) {
-     transform: rotate(0deg);
-    }
+    
+    
 }
