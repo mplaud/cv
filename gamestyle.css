@@ -97,16 +97,38 @@ button:hover {
     color: #0055A4; /* Darker blue link color on hover */
 }
 
-/* Media query for larger screens */
+/* Media query for larger screens 
 @media screen and (min-width: 768px) {
     .card {
         width: 80%;
     }
-}
+}*/
 
-/* Media query for larger screens */
+/* Media query for larger screens 
 @media screen and (min-width: 768px) {
     .player {
-        flex-direction: row-reverse; /* Align items in a row for larger screens */
+        flex-direction: column; /* Align items in a row for larger screens 
+    }
+}
+*/
+
+/* Media query for landscape (wider) screens */
+@media screen and (min-width: 768px) {
+    .content {
+        flex-direction: column; /* Arrange players horizontally for wider screens */
+    }
+
+    .player {
+        width: 30%; /* Adjust as needed to fit four players on a row */
+    }
+
+    /* Rotate players 3 and 4 for landscape mode */
+    .player:nth-child(1),
+    .player:nth-child(2) {
+     transform: rotate(180deg);
+    }
+    .player:nth-child(3),
+    .player:nth-child(4) {
+     transform: rotate(0deg);
     }
 }
