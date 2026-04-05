@@ -1,7 +1,7 @@
 
 body {
   background-color: black;
-  background-image: url("dark background.png");
+  /*background-image: url("dark background.png"); */
   background-size: 768px 768px;
   min-width: 320px 
   font-family: tahoma;
